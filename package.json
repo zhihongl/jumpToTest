@@ -2,14 +2,14 @@
   "name": "jump-to-test",
   "displayName": "Jump To Test",
   "version": "0.0.1",
-  "publisher": "jakelu",
+  "publisher": "PlayFun",
   "icon": "icon.png",
   "description": "Quickly jump between React/Vue components and their corresponding test files with a single command.",
   "keywords": ["test", "jump", "react", "vue", "component"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zhihongl/jump-to-test.git"
+    "url": "https://github.com/zhihongl/jumpToTest"
   },
   "engines": {
     "vscode": ">=1.60.0"

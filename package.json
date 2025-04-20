@@ -1,0 +1,77 @@
+{
+  "name": "jump-to-test",
+  "displayName": "Jump To Test",
+  "version": "0.0.1",
+  "publisher": "jakelu",
+  "icon": "icon.png",
+  "description": "Quickly jump between React/Vue components and their corresponding test files with a single command.",
+  "keywords": ["test", "jump", "react", "vue", "component"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhihongl/jump-to-test.git"
+  },
+  "engines": {
+    "vscode": ">=1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:jumpToTest.openTestFile"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "jumpToTest.openTestFile",
+        "title": "Go Test File"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "jumpToTest.openTestFile",
+        "key": "cmd+alt+t",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+        "editor/context": [
+          {
+              "command": "jumpToTest.openTestFile",
+              "when": "resourceLangId == javascript || resourceLangId == typescript || resourceLangId == vue ||  resourceLangId == javascriptreact || resourceLangId == typescriptreact",
+              "group": "navigation"
+          }
+        ],"explorer/context": [
+      {
+        "command": "jumpToTest.openTestFile",
+        "when": "resourceLangId == javascript || resourceLangId == typescript || resourceLangId == vue || resourceLangId == javascriptreact || resourceLangId == typescriptreact",
+        "group": "navigation"
+      }
+    ]
+  }
+  },
+  "scripts": {
+    "vscode:prepublish": "npx --yes tsc -p ./",
+    "compile": "npx --yes tsc -watch -p ./",
+    "build": "npx --yes tsc -p ./",
+    "test": "ts-node ./test/runTest.ts"
+  },
+  "devDependencies": {
+    "@types/assert": "^1.5.6",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^14.0.0",
+    "@types/vscode": "^1.60.0",
+    "@vscode/test-electron": "^2.5.2",
+    "glob": "^7.2.3",
+    "mocha": "^11.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.9.5",
+    "vscode": "^1.1.37",
+    "vscode-test": "^1.6.1"
+  },
+  "dependencies": {
+    "@vscode/vsce": "^3.3.2",
+    "jest": "^29.7.0"
+  }
+}

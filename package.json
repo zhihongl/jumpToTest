@@ -1,8 +1,8 @@
 {
-  "name": "jump-to-test",
-  "displayName": "Jump To Test",
+  "name": "jump-to-vue-test",
+  "displayName": "Jump To Vue Test",
   "version": "0.0.1",
-  "publisher": "PlayFun",
+  "publisher": "zhihonglu2000",
   "icon": "icon.png",
   "description": "Quickly jump between React/Vue components and their corresponding test files with a single command.",
   "keywords": ["test", "jump", "react", "vue", "component"],
